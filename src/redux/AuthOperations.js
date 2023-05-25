@@ -46,6 +46,7 @@ export const registerUser = createAsyncThunk(
     }
   }
 );
+
 export const loginUser = createAsyncThunk(
   'auth/login',
   async (newUser, thunkAPI) => {
@@ -79,6 +80,7 @@ export const loginUser = createAsyncThunk(
     }
   }
 );
+
 export const logOutUser = createAsyncThunk(
   'auth/logout',
   async (User, thunkAPI) => {

@@ -27,7 +27,7 @@ export default function App() {
     <>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<HomeText>This project</HomeText>} />
+          <Route index element={<HomeText>Welcome to the Phonebook!</HomeText>} />
           <Route
             path="/contacts"
             element={

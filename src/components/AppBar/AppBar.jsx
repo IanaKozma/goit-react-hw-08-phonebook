@@ -6,6 +6,7 @@ import { AppBarButton, AppBarContainer } from './AppBar.styled';
 export const AppBar = () => {
   const dispatch = useDispatch();
   const userName = useSelector(getUserName);
+  
   return (
     <AppBarContainer>
       <p>Welcome, {userName}</p>

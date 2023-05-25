@@ -22,13 +22,13 @@ export const TitleСolor = styled.span`
 `;
 
 export const ContactsPageHeader = styled.div`
-  margin: 0 auto;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 650px;
-  background-color: inherit;
+    margin: 0 auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 650px;
+    background-color: inherit;
 `;
 
 export const Text = styled.div`

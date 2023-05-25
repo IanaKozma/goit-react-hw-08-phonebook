@@ -1,8 +1,9 @@
 import { ContactsContainer } from './Contacts.styled';
 import { useSelector } from 'react-redux';
 import { getContacts, getFilter } from 'redux/selectors';
-
+import PropTypes from 'prop-types';
 import { ContactListItem } from './ContactItem';
+
 const ContactList = () => {
   const ContactsArray = useSelector(getContacts);
   const filterValue = useSelector(getFilter);
@@ -10,6 +11,7 @@ const ContactList = () => {
   const SortedContactsArray = [...ContactsArray].sort((a, b) =>
     a.name[0].localeCompare(b.name[0])
   );
+  
   const filteredContacts = () => {
     if (filterValue.toLowerCase() === '') return SortedContactsArray;
     return SortedContactsArray.filter(
@@ -18,6 +20,7 @@ const ContactList = () => {
         contact.number.toLowerCase().includes(filterValue.toLowerCase())
     );
   };
+
   return (
     <>
       <ContactsContainer>
@@ -30,3 +33,9 @@ const ContactList = () => {
 };
 
 export default ContactList;
+
+ContactList.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+};
